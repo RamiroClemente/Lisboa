@@ -489,12 +489,27 @@ const subscribeState=document.getElementById("subscribeState");
 const toast=document.getElementById("toast");
 
 function tr(key){return translations[currentLang][key]||key}
+
+function confirmationText(lang){
+  if(inviteeDisplayName){
+    return lang === "pt"
+      ? `Reserva confirmada, ${inviteeDisplayName}!`
+      : `Booking confirmed, ${inviteeDisplayName}!`;
+  }
+  return lang === "pt" ? "Reserva confirmada!" : "Booking confirmed!";
+}
+
 function setLang(lang){
  currentLang=lang;
  document.documentElement.lang=lang==="pt"?"pt-PT":"en";
  document.getElementById("ptBtn").classList.toggle("active",lang==="pt");
  document.getElementById("enBtn").classList.toggle("active",lang==="en");
  document.querySelectorAll("[data-i18n]").forEach(el=>{const v=translations[lang][el.dataset.i18n];if(v)el.innerHTML=v;});
+ const confirmationTitleDynamic = document.querySelector(".confirmation-title");
+ if(confirmationTitleDynamic && fromCalendlyNewsletter){
+   confirmationTitleDynamic.textContent = confirmationText(lang);
+ }
+
  if(confirmationTitleEl && !fromCalendlyNewsletter){confirmationTitleEl.style.display="none";}
  document.querySelectorAll("[data-ph-pt]").forEach(el=>{el.placeholder=lang==="pt"?el.dataset.phPt:el.dataset.phEn;});
  localStorage.setItem("lisboaLang",lang);
@@ -529,6 +544,31 @@ discountBtn.onclick=()=>openPopup(true);
 */
 const params = new URLSearchParams(window.location.search);
 const fromCalendlyNewsletter = params.get("newsletter") === "1";
+
+const inviteeFirstName =
+  params.get("invitee_first_name") ||
+  params.get("first_name") ||
+  "";
+
+const inviteeFullName =
+  params.get("invitee_full_name") ||
+  params.get("name") ||
+  "";
+
+const inviteeEmail =
+  params.get("invitee_email") ||
+  params.get("email") ||
+  "";
+
+const inviteeDisplayName = (inviteeFirstName || inviteeFullName).trim();
+
+/* Prefill the newsletter email coming from Calendly.
+   Consent remains UNCHECKED and the visitor must click Subscribe voluntarily. */
+const newsletterEmailInput = document.getElementById("newsletterEmail");
+if(newsletterEmailInput && inviteeEmail){
+  newsletterEmailInput.value = inviteeEmail;
+}
+
 const confirmationTitleEl = document.querySelector(".confirmation-title");
 if(confirmationTitleEl && !fromCalendlyNewsletter){
   confirmationTitleEl.style.display = "none";
