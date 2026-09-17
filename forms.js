@@ -175,10 +175,7 @@
     };
   }
 
-  // Independent carousel initializer. The main page also initializes this carousel,
-  // but an unrelated error in the large inline script can prevent that code from running.
-  // This fallback only takes over when the original handlers were not installed.
-  function installWorkshopCarouselFallback() {
+  function installWorkshopCarouselControls() {
     const carousel = document.getElementById('workshopCarousel');
     if (!carousel) return;
 
@@ -189,14 +186,8 @@
 
     if (slides.length < 2 || !prev || !next) return;
 
-    // If the inline carousel code already ran successfully, leave it untouched.
-    if (typeof prev.onclick === 'function' || typeof next.onclick === 'function') return;
-    if (carousel.dataset.carouselFallback === '1') return;
-    carousel.dataset.carouselFallback = '1';
-
     let slideIndex = slides.findIndex(slide => slide.classList.contains('active'));
     if (slideIndex < 0) slideIndex = 0;
-    let autoplayId = null;
 
     const render = () => {
       slides.forEach((slide, i) => slide.classList.toggle('active', i === slideIndex));
@@ -208,39 +199,38 @@
       render();
     };
 
-    const restartAutoplay = () => {
-      if (autoplayId !== null) window.clearInterval(autoplayId);
-      autoplayId = window.setInterval(() => go(slideIndex + 1), 5000);
-    };
-
-    prev.addEventListener('click', event => {
+    prev.onclick = event => {
       event.preventDefault();
       go(slideIndex - 1);
-      restartAutoplay();
-    });
+    };
 
-    next.addEventListener('click', event => {
+    next.onclick = event => {
       event.preventDefault();
       go(slideIndex + 1);
-      restartAutoplay();
-    });
+    };
 
     dots.forEach((dot, i) => {
-      dot.addEventListener('click', event => {
+      dot.onclick = event => {
         event.preventDefault();
         go(i);
-        restartAutoplay();
-      });
+      };
     });
 
     render();
-    restartAutoplay();
+  }
+
+  function safeInit(name, fn) {
+    try {
+      fn();
+    } catch (error) {
+      console.error(`Lisboa ${name} init error`, error);
+    }
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    installContactForm();
-    installNewsletter();
-    installWorkshopCarouselFallback();
+    safeInit('carousel', installWorkshopCarouselControls);
+    safeInit('contact form', installContactForm);
+    safeInit('newsletter', installNewsletter);
     const pt = document.getElementById('ptBtn');
     const en = document.getElementById('enBtn');
     [pt, en].forEach(btn => btn?.addEventListener('click', () => window.setTimeout(refreshPrivacyNote, 0)));
