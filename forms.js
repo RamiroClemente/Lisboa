@@ -175,9 +175,72 @@
     };
   }
 
+  // Independent carousel initializer. The main page also initializes this carousel,
+  // but an unrelated error in the large inline script can prevent that code from running.
+  // This fallback only takes over when the original handlers were not installed.
+  function installWorkshopCarouselFallback() {
+    const carousel = document.getElementById('workshopCarousel');
+    if (!carousel) return;
+
+    const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+    const dots = Array.from(carousel.querySelectorAll('.dot'));
+    const prev = carousel.querySelector('.prev');
+    const next = carousel.querySelector('.next');
+
+    if (slides.length < 2 || !prev || !next) return;
+
+    // If the inline carousel code already ran successfully, leave it untouched.
+    if (typeof prev.onclick === 'function' || typeof next.onclick === 'function') return;
+    if (carousel.dataset.carouselFallback === '1') return;
+    carousel.dataset.carouselFallback = '1';
+
+    let slideIndex = slides.findIndex(slide => slide.classList.contains('active'));
+    if (slideIndex < 0) slideIndex = 0;
+    let autoplayId = null;
+
+    const render = () => {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === slideIndex));
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === slideIndex));
+    };
+
+    const go = nextIndex => {
+      slideIndex = (nextIndex + slides.length) % slides.length;
+      render();
+    };
+
+    const restartAutoplay = () => {
+      if (autoplayId !== null) window.clearInterval(autoplayId);
+      autoplayId = window.setInterval(() => go(slideIndex + 1), 5000);
+    };
+
+    prev.addEventListener('click', event => {
+      event.preventDefault();
+      go(slideIndex - 1);
+      restartAutoplay();
+    });
+
+    next.addEventListener('click', event => {
+      event.preventDefault();
+      go(slideIndex + 1);
+      restartAutoplay();
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', event => {
+        event.preventDefault();
+        go(i);
+        restartAutoplay();
+      });
+    });
+
+    render();
+    restartAutoplay();
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     installContactForm();
     installNewsletter();
+    installWorkshopCarouselFallback();
     const pt = document.getElementById('ptBtn');
     const en = document.getElementById('enBtn');
     [pt, en].forEach(btn => btn?.addEventListener('click', () => window.setTimeout(refreshPrivacyNote, 0)));
