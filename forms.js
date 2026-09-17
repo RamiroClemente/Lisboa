@@ -17,8 +17,8 @@
       invalid: 'Preenche o nome, um email válido e a mensagem.',
       subscribeSending: 'A subscrever…',
       subscribeError: 'Não foi possível concluir a subscrição agora. Tenta novamente.',
-      consent: 'Quero receber novidades, workshops e ofertas do Ramiro por email e ter a possibilidade de ganhar um kit artístico no valor de 50 €. Posso cancelar quando quiser.',
-      consentVersion: 'lisboa_newsletter_pt_v2'
+      consent: 'Quero receber novidades, workshops e ofertas do Ramiro por email. Posso cancelar quando quiser.',
+      consentVersion: 'lisboa_newsletter_pt_v3'
     },
     en: {
       contactPrivacy: 'Controller: Ramiro Clemente · I’ll only use these details to reply to your message. Please don’t include sensitive information.',
@@ -29,8 +29,8 @@
       invalid: 'Please add your name, a valid email and your message.',
       subscribeSending: 'Subscribing…',
       subscribeError: 'I couldn’t complete your subscription right now. Please try again.',
-      consent: 'I’d like to receive Ramiro’s news, workshops and offers by email and have a chance to win an art materials kit worth €50. I can unsubscribe anytime.',
-      consentVersion: 'lisboa_newsletter_en_v2'
+      consent: 'I’d like to receive Ramiro’s news, workshops and offers by email. I can unsubscribe anytime.',
+      consentVersion: 'lisboa_newsletter_en_v3'
     }
   };
 
