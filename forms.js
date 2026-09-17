@@ -179,7 +179,7 @@
     const carousel = document.getElementById('workshopCarousel');
     if (!carousel) return;
 
-    const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+    const slides = Array.from(carousel.querySelectorAll('.carousel-slide, .slide'));
     const dots = Array.from(carousel.querySelectorAll('.dot'));
     const prev = carousel.querySelector('.prev');
     const next = carousel.querySelector('.next');
