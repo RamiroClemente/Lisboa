@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f2ede5">
+<meta name="description" content="Join Ramiro Clemente's mailing list for news about workshops, events and available artworks.">
+<title>Newsletter · Ramiro Clemente</title>
+<style>
+:root{--paper:#f2ede5;--sage:#dfe6e2;--ink:#111;--muted:#6a665f;--line:rgba(17,17,17,.18);--max:1180px}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 Inter,Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+button,input{font:inherit}a{color:inherit;text-underline-offset:3px}
+.skip{position:absolute;top:-100px;left:10px;background:#111;color:#fff;padding:10px}.skip:focus{top:10px}
+.topbar{border-bottom:1px solid var(--line);background:var(--paper)}.bar{max-width:var(--max);margin:auto;padding:15px clamp(18px,4vw,55px);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font-size:.76rem;font-weight:850;letter-spacing:.02em;text-decoration:none;text-transform:uppercase}.lang{display:flex;border:1px solid #111;border-radius:999px;overflow:hidden}.lang button{border:0;background:none;padding:8px 12px;cursor:pointer;font-size:.7rem;font-weight:800}.lang button[aria-pressed=true]{background:#111;color:#fff}
+main{max-width:var(--max);margin:auto;padding:clamp(44px,8vw,110px) clamp(18px,4vw,55px) 90px}
+.grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:clamp(30px,7vw,100px);align-items:center}
+.kicker{font-size:.69rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin:0 0 25px;color:var(--muted)}
+h1{font-size:clamp(3.1rem,6.5vw,6.5rem);line-height:.91;letter-spacing:-.06em;font-weight:900;margin:0 0 30px;max-width:780px}
+.lead{font-size:clamp(1.2rem,2.1vw,1.7rem);line-height:1.22;letter-spacing:-.025em;max-width:650px;margin:0}
+.card{background:var(--sage);border:1px solid var(--line);border-radius:22px;padding:clamp(25px,4vw,46px);box-shadow:0 15px 40px rgba(17,17,17,.04)}
+.card h2{font-size:clamp(1.65rem,3vw,2.35rem);letter-spacing:-.045em;line-height:1.05;margin:0 0 25px}
+.field{display:block;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+input[type=email]{width:100%;border:1px solid #111;border-radius:12px;padding:15px;background:#fff;min-height:52px;color:#111}
+input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #215a8d;outline-offset:3px}
+.consent{display:flex;align-items:flex-start;gap:11px;font-size:.83rem;line-height:1.42;margin:19px 0;cursor:pointer}.consent input{width:18px;height:18px;flex:none;margin:2px 0 0;accent-color:#111}
+.submit{width:100%;border:1px solid #111;border-radius:999px;background:#111;color:#fff;min-height:52px;padding:13px 20px;font-size:.8rem;font-weight:800;letter-spacing:.03em;cursor:pointer}.submit:hover{background:#333}.submit:disabled{opacity:.6;cursor:wait}
+.micro{font-size:.75rem;color:#514f4b;line-height:1.5;margin:18px 0 0}.status{min-height:1.4em;margin:14px 0 0;font-size:.86rem;font-weight:700}.status.error{color:#8b2f25}.status.success{color:#20553a}
+footer{max-width:var(--max);margin:auto;border-top:1px solid var(--line);padding:24px clamp(18px,4vw,55px) 35px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.76rem;color:#514f4b}
+[hidden]{display:none!important}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.card{max-width:600px}main{padding-bottom:64px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content / Ir al contenido</a>
+<header class="topbar"><div class="bar"><a class="brand" href="https://www.instagram.com/ramiroclemente/">Ramiro Clemente</a><div class="lang" role="group" aria-label="Language / Idioma"><button id="en" type="button" aria-pressed="true">EN</button><button id="es" type="button" aria-pressed="false">ES</button></div></div></header>
+<main id="main"><div class="grid"><section><p class="kicker" data-en="STAY IN TOUCH" data-es="SEGUIMOS EN CONTACTO">STAY IN TOUCH</p><h1 data-en="The next workshop starts here." data-es="El próximo taller empieza aquí.">The next workshop starts here.</h1><p class="lead" data-en="Can't join me this time? Leave your email and I'll let you know about future workshops, events and available artworks." data-es="¿No puedes venir al taller esta vez? Déjame tu correo y te contaré sobre próximos talleres, eventos y obras disponibles.">Can't join me this time? Leave your email and I'll let you know about future workshops, events and available artworks.</p></section>
+<section class="card" aria-labelledby="form-title"><h2 id="form-title" data-en="Get the news directly from me." data-es="Recibe mis novedades directamente.">Get the news directly from me.</h2>
+<form id="signup"><label class="field" for="email" data-en="EMAIL ADDRESS" data-es="CORREO ELECTRÓNICO">EMAIL ADDRESS</label><input id="email" name="email" type="email" required autocomplete="email" inputmode="email" maxlength="254" placeholder="you@example.com">
+<label class="consent"><input id="consent" type="checkbox" required><span id="consentText">I agree to receive emails from Ramiro Clemente about workshops, courses, events and available artworks. I can unsubscribe at any time.</span></label>
+<button class="submit" id="submit" type="submit" data-en="KEEP ME UPDATED" data-es="QUIERO RECIBIR NOVEDADES">KEEP ME UPDATED</button><p class="status" id="status" role="status" aria-live="polite"></p>
+<p class="micro" id="legal">Controller: Ramiro Clemente (Barcelona, Spain). Purpose: email news about courses, workshops, events and available artworks. Legal basis: your consent. You can withdraw it at any time and exercise your data rights at <a href="mailto:ramiroclemente2000@gmail.com">ramiroclemente2000@gmail.com</a>. <a href="privacy.html">Privacy policy</a>.</p></form></section></div></main>
+<footer><span>© Ramiro Clemente</span><a href="privacy.html" id="privacyLink">Privacy policy</a></footer>
+<script>
+(() => {
+'use strict';
+const endpoint='https://vhtasjikqfldoilqdbhv.supabase.co/functions/v1/submit-form';
+const messages={
+en:{consent:'I agree to receive emails from Ramiro Clemente about workshops, courses, events and available artworks. I can unsubscribe at any time.',legal:'Controller: Ramiro Clemente (Barcelona, Spain). Purpose: email news about courses, workshops, events and available artworks. Legal basis: your consent. You can withdraw it at any time and exercise your data rights at',privacy:'Privacy policy',sending:'Signing you up…',success:'Thank you! Your subscription has been received.',error:'Your subscription could not be completed. Please try again.',invalid:'Please enter a valid email and tick the consent box.',consentVersion:'newsletter_en_v1'},
+es:{consent:'Acepto recibir correos de Ramiro Clemente sobre talleres, cursos, eventos y obras disponibles. Puedo darme de baja en cualquier momento.',legal:'Responsable: Ramiro Clemente (Barcelona, España). Finalidad: enviarte por correo novedades sobre cursos, talleres, eventos y obras disponibles. Base jurídica: tu consentimiento. Puedes retirarlo cuando quieras y ejercer tus derechos escribiendo a',privacy:'Política de privacidad',sending:'Inscribiéndote…',success:'¡Gracias! Hemos recibido tu suscripción.',error:'No se ha podido completar la suscripción. Inténtalo de nuevo.',invalid:'Introduce un correo válido y marca la casilla de consentimiento.',consentVersion:'newsletter_es_v1'}};
+let lang=new URLSearchParams(location.search).get('lang')==='es'?'es':'en';
+const form=document.getElementById('signup'),button=document.getElementById('submit'),status=document.getElementById('status');
+function render(){document.documentElement.lang=lang;document.querySelectorAll('[data-en]').forEach(el=>el.textContent=el.dataset[lang]);document.getElementById('consentText').textContent=messages[lang].consent;document.getElementById('legal').innerHTML=messages[lang].legal+' <a href="mailto:ramiroclemente2000@gmail.com">ramiroclemente2000@gmail.com</a>. <a href="privacy.html?lang='+lang+'">'+messages[lang].privacy+'</a>.';document.getElementById('privacyLink').textContent=messages[lang].privacy;document.getElementById('privacyLink').href='privacy.html?lang='+lang;document.getElementById('en').setAttribute('aria-pressed',String(lang==='en'));document.getElementById('es').setAttribute('aria-pressed',String(lang==='es'));status.textContent='';status.className='status'}
+document.getElementById('en').onclick=()=>{lang='en';render()};document.getElementById('es').onclick=()=>{lang='es';render()};render();
+form.addEventListener('submit',async e=>{e.preventDefault();const email=document.getElementById('email').value.trim().toLowerCase();if(!form.reportValidity()||!email){status.textContent=messages[lang].invalid;status.className='status error';return}
+const consentText=messages[lang].consent,consentVersion=messages[lang].consentVersion,submitLang=lang;button.disabled=true;button.textContent=messages[lang].sending;status.textContent='';status.className='status';
+try{const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({form_type:'newsletter',language:submitLang,email,marketing_consent:true,consent_version:consentVersion,consent_text:consentText,source_page:location.origin+location.pathname,website:''})});const data=await response.json().catch(()=>({}));if(!response.ok||!data.ok)throw Error('submit_failed');form.reset();status.textContent=messages[lang].success;status.className='status success'}catch(err){status.textContent=messages[lang].error;status.className='status error'}finally{button.disabled=false;button.textContent=button.dataset[lang]}}
+);
+})();
+</script>
+</body>
+</html>
