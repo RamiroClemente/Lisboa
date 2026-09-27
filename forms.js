@@ -31,8 +31,7 @@
       popupConsentRequired: 'Assinala primeiro a opção de consentimento.',
       popupInvalidEmail: 'Introduz um email válido.',
       popupSuccessTitle: 'Obrigado!',
-      popupSuccessText: 'Já estás na mailing list.',
-      popupCodeLabel: 'O teu código de 10%'
+      popupSuccessText: 'Já estás na mailing list.'
     },
     en: {
       contactPrivacy: 'Controller: Ramiro Clemente · I’ll only use these details to reply to your message. Please don’t include sensitive information.',
@@ -56,8 +55,7 @@
       popupConsentRequired: 'Please tick the consent option first.',
       popupInvalidEmail: 'Please enter a valid email address.',
       popupSuccessTitle: 'Thank you!',
-      popupSuccessText: 'You’re now on the mailing list.',
-      popupCodeLabel: 'Your 10% code'
+      popupSuccessText: 'You’re now on the mailing list.'
     }
   };
 
@@ -230,10 +228,6 @@
             <div class="rc-newsletter-eyebrow">${c.popupEyebrow}</div>
             <h2>${c.popupSuccessTitle}</h2>
             <p>${c.popupSuccessText}</p>
-            <div class="rc-newsletter-code-wrap">
-              <span>${c.popupCodeLabel}</span>
-              <strong>RC10!</strong>
-            </div>
           </div>
         </section>
       </div>`;
@@ -251,7 +245,7 @@
       .rc-newsletter-close{position:absolute;top:14px;right:16px;width:40px;height:40px;border:0;background:transparent;color:inherit;font:300 30px/1 Arial,sans-serif;cursor:pointer;border-radius:50%}
       .rc-newsletter-close:hover,.rc-newsletter-close:focus-visible{background:rgba(0,0,0,.06);outline:none}
       .rc-newsletter-eyebrow{font-size:.72rem;letter-spacing:.18em;font-weight:700;margin:0 0 12px;color:#6e6961}
-      .rc-newsletter-card h2{font-size:clamp(2rem,7vw,3.25rem);line-height:.98;letter-spacing:-.045em;margin:0 0 18px;font-weight:700}
+      .rc-newsletter-card h2{font-size:clamp(2rem,7vw,3.25rem);line-height:.98;letter-spacing:-.045em;margin:0 0 18px;font-weight:600}
       .rc-newsletter-text,.rc-newsletter-success p{font-size:1rem;line-height:1.55;margin:0 0 26px;color:#4e4a45}
       .rc-newsletter-email-label{display:block;font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px}
       #rcNewsletterEmail{box-sizing:border-box;width:100%;height:52px;border:1px solid #bbb5ac;border-radius:12px;background:#fff;color:#191817;padding:0 15px;font:inherit;outline:none}
@@ -264,9 +258,6 @@
       .rc-newsletter-error{min-height:1.2em;margin:10px 0 0;font-size:.78rem;line-height:1.4;color:#8b2f25}
       .rc-newsletter-success{text-align:center;padding:8px 0 4px}
       .rc-newsletter-success .rc-newsletter-eyebrow{margin-bottom:16px}
-      .rc-newsletter-code-wrap{display:flex;flex-direction:column;gap:7px;margin-top:24px;padding:20px;border:1px solid #cbc4ba;border-radius:14px;background:#fff}
-      .rc-newsletter-code-wrap span{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:#6e6961;font-weight:700}
-      .rc-newsletter-code-wrap strong{font-size:2rem;letter-spacing:.04em}
       body.rc-newsletter-lock{overflow:hidden}
       @media (max-width:600px){.rc-newsletter-popup{padding:12px}.rc-newsletter-card{padding:38px 22px 28px;border-radius:16px}.rc-newsletter-card h2{font-size:2.35rem}}
       @media (prefers-reduced-motion:no-preference){.rc-newsletter-card{animation:rcNewsletterIn .22s ease-out both}@keyframes rcNewsletterIn{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}}

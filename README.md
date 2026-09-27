@@ -1,40 +1,14 @@
-# Mixed Media Lab — Lisboa
+# Mixed Media Lab — Cacém
 
-FINAL CLEAN PACKAGE FOR GITHUB PAGES
+Draft for the November 7, 2026 workshop at Ponto das Artes Megastore Cacém, 14:00–18:00 Portugal time. This draft has not been published to GitHub Pages.
 
-Upload these files to the ROOT of the `Lisboa` repository:
+The public URL remains https://ramiroclemente.github.io/Lisboa/ after publication to `main`.
 
-- index.html
-- .nojekyll
-- README.md
+## Publication checks
 
-IMPORTANT:
-There should be only ONE HTML file in the repository root:
-`index.html`
+- Complete the Calendly event at `https://calendly.com/ramiroclemente/lisboa` before publishing. On September 27, 2026, the event's description, physical location and date-specific availability were changed to the new Cacém workshop. The public booking page confirms the 65 € price and new venue, but the November 7 date is not yet bookable: the public calendar stops in October and the available-times endpoint returns no slots. Review the booking date-range limit and any calendar conflict, then verify the full booking flow before using the link.
+- The attendee price is confirmed at 65 € without Early Bird or coupon. The art materials kit draw (50 €) remains in the page. The public copy says: “20% de desconto numa seleção de materiais da loja.” The page does not state a participant cap.
+- The supplied Ponto das Artes and Royal Talens logos are in `assets/` and displayed at or below their native size. Partner contacts link to the published shop and brand contact details.
+- Review the Portuguese and English versions and the booking flow before merging to `main`.
 
-If you currently see `index (1).html`, delete it after confirming the new `index.html`
-has been uploaded successfully.
-
-Live page:
-https://ramiroclemente.github.io/Lisboa/
-
-Newsletter confirmation redirect:
-https://ramiroclemente.github.io/Lisboa/?newsletter=1
-
-Behavior:
-- Normal visit → newsletter popup after 5 seconds if not subscribed.
-- `?newsletter=1` → popup opens immediately and shows:
-  PT: "Reserva confirmada!"
-  EN: "Booking confirmed!"
-- RC10! is the discount code.
-- Portuguese is the default language; English is available in the language switch.
-- All page images are embedded inside index.html; no assets folder is required.
-
-Active links:
-- Booking: https://calendly.com/ramiroclemente/lisboa
-- Instagram: https://www.instagram.com/ramiroclemente/
-- Facebook: https://www.facebook.com/ramiroclementeart/
-
-Note:
-The newsletter/contact forms still need a real provider endpoint if you want submitted
-emails/messages to be transmitted and stored outside the browser.
+The contact and newsletter forms use the existing `forms.js` endpoint. The newsletter no longer offers the obsolete RC10! code.
