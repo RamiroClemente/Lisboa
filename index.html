@@ -29,6 +29,8 @@ button,input,textarea{font:inherit}
 .btn:hover{transform:translateY(-1px)}
 .btn-dark{background:var(--ink);color:#fff}
 .btn-light{background:#fff;color:#111;border-color:#fff}
+.booking-fallback{margin:12px 0 0;font-size:.83rem;line-height:1.45}
+.booking-fallback a{font-weight:600;text-underline-offset:3px}
 
 /* fixed top nav */
 .topbar{position:fixed;z-index:100;top:0;left:0;right:0;height:var(--nav-h);background:rgba(242,237,229,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(17,17,17,.08)}
@@ -51,6 +53,7 @@ button,input,textarea{font:inherit}
 .hero-copy{position:relative;z-index:2;color:#fff;padding-bottom:82px;width:min(calc(100% - 36px),1120px);margin-inline:auto}
 .hero-title{font-size:clamp(3.5rem,7.7vw,7.2rem);line-height:.9;letter-spacing:-.065em;margin:0 0 14px;font-weight:500;max-width:680px}
 .hero-sub{font-size:clamp(1.25rem,2.6vw,2.2rem);line-height:1.03;letter-spacing:-.04em;margin:0;max-width:430px}
+.hero-info{font-size:clamp(.95rem,1.5vw,1.18rem);line-height:1.4;font-weight:500;margin:22px 0 0;max-width:700px;text-shadow:0 2px 12px rgba(0,0,0,.35)}
 
 /* workshop */
 .workshop{background:var(--paper)}
@@ -236,6 +239,7 @@ button,input,textarea{font:inherit}
   <div class="hero-copy">
     <h1 class="hero-title">DEMO + WORKSHOP</h1>
     <p class="hero-sub" data-i18n="heroSub">Materiais para experimentar.<br>Uma surpresa no final.</p>
+    <p class="hero-info" data-i18n="heroInfo">7 de novembro · 14h–18h · Ponto das Artes, Cacém · 65 €</p>
   </div>
 </section>
 
@@ -271,6 +275,7 @@ button,input,textarea{font:inherit}
           </article>
         </div>
         <div style="margin-top:22px"><a class="btn btn-dark" href="https://calendly.com/ramiroclemente/lisboa" target="_blank" rel="noopener" data-i18n="join">Quero participar</a></div>
+        <p class="booking-fallback"><span data-i18n="bookingFallback">Se a data ainda não aparecer na agenda,</span> <a href="mailto:ramiroclemente2000@gmail.com?subject=Mixed%20Media%20Lab%20-%207%20de%20novembro" data-i18n="bookingFallbackLink">escreve-me para pedir a tua vaga.</a></p>
       </div>
     </div>
   </div>
@@ -385,6 +390,7 @@ button,input,textarea{font:inherit}
           <div class="big-price">65 €</div>
         </div>
       </div>
+      <p class="booking-fallback"><span data-i18n="bookingFallback">Se a data ainda não aparecer na agenda,</span> <a href="mailto:ramiroclemente2000@gmail.com?subject=Mixed%20Media%20Lab%20-%207%20de%20novembro" data-i18n="bookingFallbackLink">escreve-me para pedir a tua vaga.</a></p>
     </div>
   </div>
 </section>
@@ -430,8 +436,10 @@ button,input,textarea{font:inherit}
 <script>
 const translations={
 pt:{
-navWorkshop:"Mixed Media Lab · 7 Nov",menuWorkshop:"Workshop",menuAbout:"Sobre mim",menuDetails:"Detalhes",menuContact:"Contacto",
+ navWorkshop:"Mixed Media Lab · 7 Nov",menuWorkshop:"Workshop",menuAbout:"Sobre mim",menuDetails:"Detalhes",menuContact:"Contacto",
+ bookingFallback:"Se a data ainda não aparecer na agenda,",bookingFallbackLink:"escreve-me para pedir a tua vaga.",
 heroSub:"Materiais para experimentar.<br>Uma surpresa no final.",
+heroInfo:"7 de novembro · 14h–18h · Ponto das Artes, Cacém · 65 €",
 problemTitle:"Esperas pela ideia certa? Sentes que te falta imaginação? Não sabes por onde começar? Bloqueias quando tens de decidir?",
 problemLead:"Eu também passei por isso. Foi aí que percebi uma coisa importante: a inspiração não tem de vir primeiro. Aparece depois de começarmos. E improvisar não é trabalhar ao acaso — é aprender a fazer uma primeira escolha, observar o que acontece e responder a partir daí.",
 materialsNote:"Durante o workshop, terás materiais para experimentar e, no final, poderás ganhar um kit de materiais no valor de 50 €.",collabLabel:"EM COLABORAÇÃO COM",
@@ -451,8 +459,10 @@ cityCopenhagen:"Copenhaga",countryDenmark:"Dinamarca",countrySpain:"Espanha"
 },
 
 en:{
-navWorkshop:"Mixed Media Lab · 7 Nov",menuWorkshop:"Workshop",menuAbout:"About me",menuDetails:"Details",menuContact:"Contact",
+ navWorkshop:"Mixed Media Lab · 7 Nov",menuWorkshop:"Workshop",menuAbout:"About me",menuDetails:"Details",menuContact:"Contact",
+ bookingFallback:"If the date isn’t showing in the booking calendar,",bookingFallbackLink:"email me to request your place.",
 heroSub:"Materials to try.<br>A small surprise at the end.",
+heroInfo:"November 7 · 2–6 pm · Ponto das Artes, Cacém · 65 €",
 problemTitle:"Are you waiting for the right idea? Do you feel you lack imagination? Don’t know where to begin? Freeze when you have to decide?",
 problemLead:"I’ve been there too. That’s when I realised something important: inspiration doesn’t have to come first. It often appears after we begin. And improvising isn’t working at random — it’s learning to make a first choice, observe what happens, and respond from there.",
 materialsNote:"During the workshop you’ll have materials to try, and at the end you could win an art materials kit worth 50 €.",collabLabel:"IN COLLABORATION WITH",
