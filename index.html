@@ -29,8 +29,6 @@ button,input,textarea{font:inherit}
 .btn:hover{transform:translateY(-1px)}
 .btn-dark{background:var(--ink);color:#fff}
 .btn-light{background:#fff;color:#111;border-color:#fff}
-.booking-fallback{margin:12px 0 0;font-size:.83rem;line-height:1.45}
-.booking-fallback a{font-weight:600;text-underline-offset:3px}
 
 /* fixed top nav */
 .topbar{position:fixed;z-index:100;top:0;left:0;right:0;height:var(--nav-h);background:rgba(242,237,229,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(17,17,17,.08)}
@@ -251,7 +249,7 @@ button,input,textarea{font:inherit}
         <p class="body-lg problem-lead" data-i18n="problemLead">Eu também passei por isso. Foi aí que percebi uma coisa importante: a inspiração não tem de vir primeiro. Aparece depois de começarmos. E improvisar não é trabalhar ao acaso — é aprender a fazer uma primeira escolha, observar o que acontece e responder a partir daí.</p>
         <div class="material-note">
           <p data-i18n="materialsNote">Durante o workshop, terás materiais para experimentar e, no final, poderás ganhar um kit de materiais no valor de 50 €.</p>
-          <p class="store-offer" data-i18n="storeDiscountValue">20% de desconto numa seleção de materiais da loja.</p>
+          <p class="store-offer" data-i18n="storeDiscountValue">Os participantes terão 20% de desconto numa seleção de materiais da loja.</p>
         </div>
         <div class="collab-label" data-i18n="collabLabel">EM COLABORAÇÃO COM</div>
         <div class="collab-grid">
@@ -275,7 +273,6 @@ button,input,textarea{font:inherit}
           </article>
         </div>
         <div style="margin-top:22px"><a class="btn btn-dark" href="https://calendly.com/ramiroclemente/lisboa/2026-11-07T14:00:00+00:00?month=2026-11&amp;date=2026-11-07" data-i18n="join">Quero participar</a></div>
-        <p class="booking-fallback"><span data-i18n="bookingFallback">As vagas são confirmadas por email.</span> <a href="mailto:ramiroclemente2000@gmail.com?subject=Pedido%20de%20vaga%20-%20Mixed%20Media%20Lab%20-%207%20de%20novembro" data-i18n="bookingFallbackLink">Pede a tua vaga aqui.</a></p>
       </div>
     </div>
   </div>
@@ -383,14 +380,14 @@ button,input,textarea{font:inherit}
         <div class="detail-row"><strong data-i18n="timeLabel">HORA</strong><span data-i18n="timeValue">14:00–18:00 (hora de Portugal)</span></div>
         <div class="detail-row"><strong data-i18n="localLabel">LOCAL</strong><span><span data-i18n="locationValue">Ponto das Artes · Megastore Cacém<br>Avenida das Indústrias, Lote H · Colaride<br>2735-213 Agualva-Cacém, Portugal</span><br><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Ponto+das+Artes+Megastore+Cacem+Avenida+das+Industrias+Lote+H+Colaride" target="_blank" rel="noopener" data-i18n="maps">Ver no Google Maps</a></span></div>
         <div class="detail-row"><strong data-i18n="includesLabel">INCLUI</strong><span data-i18n="includesValue">Demonstração + workshop prático · materiais para experimentar · sorteio de um kit de materiais no valor de 50 €</span></div>
-        <div class="detail-row"><strong data-i18n="storeDiscountLabel">NA LOJA</strong><span data-i18n="storeDiscountValue">20% de desconto numa seleção de materiais da loja.</span></div>
+        <div class="detail-row"><strong data-i18n="storeDiscountLabel">NA LOJA</strong><span data-i18n="storeDiscountValue">Os participantes terão 20% de desconto numa seleção de materiais da loja.</span></div>
       </div>
       <div class="details-price">
         <div>
           <div class="big-price">65 €</div>
+          <div style="margin-top:18px"><a class="btn btn-dark" href="https://calendly.com/ramiroclemente/lisboa/2026-11-07T14:00:00+00:00?month=2026-11&amp;date=2026-11-07" data-i18n="secure">Garantir a minha vaga</a></div>
         </div>
       </div>
-      <p class="booking-fallback"><span data-i18n="bookingFallback">As vagas são confirmadas por email.</span> <a href="mailto:ramiroclemente2000@gmail.com?subject=Pedido%20de%20vaga%20-%20Mixed%20Media%20Lab%20-%207%20de%20novembro" data-i18n="bookingFallbackLink">Pede a tua vaga aqui.</a></p>
     </div>
   </div>
 </section>
@@ -437,7 +434,6 @@ button,input,textarea{font:inherit}
 const translations={
 pt:{
  navWorkshop:"Mixed Media Lab · 7 Nov",menuWorkshop:"Workshop",menuAbout:"Sobre mim",menuDetails:"Detalhes",menuContact:"Contacto",
- bookingFallback:"As vagas são confirmadas por email.",bookingFallbackLink:"Pede a tua vaga aqui.",
 heroSub:"Materiais para experimentar.<br>Uma surpresa no final.",
 heroInfo:"7 de novembro · 14h–18h · Ponto das Artes, Cacém · 65 €",
 problemTitle:"Esperas pela ideia certa? Sentes que te falta imaginação? Não sabes por onde começar? Bloqueias quando tens de decidir?",
@@ -453,14 +449,13 @@ aboutKicker:"SOBRE MIM",role:"ARTISTA · EDUCADOR · EMBAIXADOR ROYAL TALENS",
 aboutLead:"Sou artista e trabalho há mais de 20 anos entre o desenho, a pintura, a fotografia e as técnicas mistas. Estudei Belas-Artes e fiz uma pós-graduação em Cultura Visual.",
 aboutBody:"Nos últimos cinco anos tenho dado workshops online e presenciais, em Portugal e noutros países. Gosto de ensinar de uma forma simples e prática: experimentar, observar o que acontece e encontrar soluções a partir do próprio processo.",
 reserve:"Reservar!",galleryTitle:"Workshops, pessoas, cidades.",galleryText:"Alguns momentos de workshops e demonstrações presenciais.",
-testimonialsTitle:"Quem já participou.",participate:"Participar!",detailsKicker:"DETALHES",detailsTitle:"Detalhes<br>do<br>workshop.",dateLabel:"DATA",dateValue:"7 de novembro de 2026",timeLabel:"HORA",timeValue:"14:00–18:00 (hora de Portugal)",localLabel:"LOCAL",locationValue:"Ponto das Artes · Megastore Cacém<br>Avenida das Indústrias, Lote H · Colaride<br>2735-213 Agualva-Cacém, Portugal",maps:"Ver no Google Maps",includesLabel:"INCLUI",includesValue:"Demonstração + workshop prático · materiais para experimentar · sorteio de um kit de materiais no valor de 50 €",storeDiscountLabel:"NA LOJA",storeDiscountValue:"20% de desconto numa seleção de materiais da loja.",secure:"Garantir a minha vaga",
+ testimonialsTitle:"Quem já participou.",participate:"Participar!",detailsKicker:"DETALHES",detailsTitle:"Detalhes<br>do<br>workshop.",dateLabel:"DATA",dateValue:"7 de novembro de 2026",timeLabel:"HORA",timeValue:"14:00–18:00 (hora de Portugal)",localLabel:"LOCAL",locationValue:"Ponto das Artes · Megastore Cacém<br>Avenida das Indústrias, Lote H · Colaride<br>2735-213 Agualva-Cacém, Portugal",maps:"Ver no Google Maps",includesLabel:"INCLUI",includesValue:"Demonstração + workshop prático · materiais para experimentar · sorteio de um kit de materiais no valor de 50 €",storeDiscountLabel:"NA LOJA",storeDiscountValue:"Os participantes terão 20% de desconto numa seleção de materiais da loja.",secure:"Garantir a minha vaga",
 contactKicker:"CONTACTO",contactTitle:"Tens alguma dúvida?",atelierContact:"CONTACTO SOBRE O WORKSHOP",join2:"Quero participar!",name:"Nome",message:"Mensagem",newsletterOptional:"NEWSLETTER (OPCIONAL)",consent:"Quero receber novidades, workshops e ofertas do Ramiro por email. Posso cancelar quando quiser.",send:"Enviar mensagem",footerDate:"Cacém · 7 novembro 2026",
 cityCopenhagen:"Copenhaga",countryDenmark:"Dinamarca",countrySpain:"Espanha"
 },
 
 en:{
  navWorkshop:"Mixed Media Lab · 7 Nov",menuWorkshop:"Workshop",menuAbout:"About me",menuDetails:"Details",menuContact:"Contact",
- bookingFallback:"Places are confirmed by email.",bookingFallbackLink:"Request yours here.",
 heroSub:"Materials to try.<br>A small surprise at the end.",
 heroInfo:"November 7 · 2–6 pm · Ponto das Artes, Cacém · 65 €",
 problemTitle:"Are you waiting for the right idea? Do you feel you lack imagination? Don’t know where to begin? Freeze when you have to decide?",
@@ -476,7 +471,7 @@ aboutKicker:"ABOUT ME",role:"ARTIST · EDUCATOR · ROYAL TALENS AMBASSADOR",
 aboutLead:"I’m an artist and I’ve worked for more than 20 years across drawing, painting, photography and mixed media. I studied Fine Arts and completed postgraduate studies in Visual Culture.",
 aboutBody:"Over the last five years, I’ve taught online and in-person workshops in Portugal and other countries. I like teaching in a simple, practical way: experimenting, observing what happens and finding solutions through the process itself.",
 reserve:"Book!",galleryTitle:"Workshops, people, cities.",galleryText:"A few moments from in-person workshops and demonstrations.",
-testimonialsTitle:"What participants say.",participate:"Join!",detailsKicker:"DETAILS",detailsTitle:"Workshop<br>details.",dateLabel:"DATE",dateValue:"November 7, 2026",timeLabel:"TIME",timeValue:"2:00–6:00 pm (Portugal time)",localLabel:"LOCATION",locationValue:"Ponto das Artes · Megastore Cacém<br>Avenida das Indústrias, Lote H · Colaride<br>2735-213 Agualva-Cacém, Portugal",maps:"View on Google Maps",includesLabel:"INCLUDES",includesValue:"Demonstration + hands-on workshop · materials to try · draw for an art materials kit worth 50 €",storeDiscountLabel:"IN STORE",storeDiscountValue:"20% off a selection of materials in the store.",secure:"Secure my place",
+ testimonialsTitle:"What participants say.",participate:"Join!",detailsKicker:"DETAILS",detailsTitle:"Workshop<br>details.",dateLabel:"DATE",dateValue:"November 7, 2026",timeLabel:"TIME",timeValue:"2:00–6:00 pm (Portugal time)",localLabel:"LOCATION",locationValue:"Ponto das Artes · Megastore Cacém<br>Avenida das Indústrias, Lote H · Colaride<br>2735-213 Agualva-Cacém, Portugal",maps:"View on Google Maps",includesLabel:"INCLUDES",includesValue:"Demonstration + hands-on workshop · materials to try · draw for an art materials kit worth 50 €",storeDiscountLabel:"IN STORE",storeDiscountValue:"Participants will enjoy 20% off a selection of materials in the store.",secure:"Secure my place",
 contactKicker:"CONTACT",contactTitle:"Any questions?",atelierContact:"WORKSHOP CONTACT",join2:"I want to join!",name:"Name",message:"Message",newsletterOptional:"NEWSLETTER (OPTIONAL)",consent:"I’d like to receive Ramiro’s news, workshops and offers by email. I can unsubscribe anytime.",send:"Send message",footerDate:"Cacém · November 7, 2026",
 cityCopenhagen:"Copenhagen",countryDenmark:"Denmark",countrySpain:"Spain"
 }
